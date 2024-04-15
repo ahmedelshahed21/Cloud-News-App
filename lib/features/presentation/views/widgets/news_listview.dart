@@ -1,7 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:news_app/features/data/models/article_model.dart';
 import 'package:news_app/features/presentation/views/widgets/news_tile.dart';
-import '../../../data/models/article_model.dart';
+
 
 class NewsListView extends StatelessWidget{
   List<ArticleModel> articles=[];

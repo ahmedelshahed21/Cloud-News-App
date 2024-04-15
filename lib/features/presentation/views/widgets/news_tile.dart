@@ -24,7 +24,11 @@ class NewsTile extends StatelessWidget {
               height: 200,
               width: double.infinity,
                 fit: BoxFit.fill,
-              ): Image.asset(AssetsAPP.failure)),
+              ) : Image.asset(AssetsAPP.failure,
+                height: 200,
+                width: double.infinity,
+                fit: BoxFit.fill,
+              )),
             const SizedBox(
               height: 12,
             ),
