@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/components/news_tile.dart';
-import '../models/article_model.dart';
+import 'package:news_app/features/presentation/views/widgets/news_tile.dart';
+import '../../../data/models/article_model.dart';
 
 class NewsListView extends StatelessWidget{
   List<ArticleModel> articles=[];
@@ -11,6 +11,6 @@ class NewsListView extends StatelessWidget{
     return SliverList(
       delegate: SliverChildBuilderDelegate(
       childCount: articles.length,
-      (context, index) => NewsTile(articleModel: articles[index])));
+      (context, index) => NewsTile(article: articles[index])));
   }
 }

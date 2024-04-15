@@ -1,8 +1,9 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/components/news_listview.dart';
-import 'package:news_app/models/article_model.dart';
-import 'package:news_app/services/news_services.dart';
+import 'package:news_app/features/presentation/views/widgets/news_listview.dart';
+import 'package:news_app/features/data/models/article_model.dart';
+import 'package:news_app/core/utils/services/news_service.dart';
+import 'package:news_app/features/presentation/views/widgets/shimmer_loading.dart';
 
 class NewsListViewBuilder extends StatefulWidget{
   final String category;
@@ -13,11 +14,12 @@ class NewsListViewBuilder extends StatefulWidget{
 }
 
 class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
-  // ignore: prefer_typing_uninitialized_variables
   var future;
   @override
   void initState() {
-    future=NewsServices(Dio()).getGeneralNews(category: widget.category);
+    future=NewsService(Dio()).getGeneralNews(category: widget.category);
+    //future=NewsRepoImpl(apiService: ApiService(Dio())).getGeneralNews(category: widget.category);
+
     super.initState();
   }
 
@@ -38,18 +40,11 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
           else
            {
            return const SliverToBoxAdapter(
-               child: SizedBox(
-                 height: 450,
-               child: Center(
-                   child: CircularProgressIndicator(
-                     color: Colors.orange,
-                 backgroundColor: Colors.black,
-                 )
-               )
-             )
-           );
+                child: ShimmerLoading()
+              );
          }
       }
     );
   }
 }
+

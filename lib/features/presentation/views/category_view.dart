@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/components/news_list_view_builder.dart';
+import 'package:news_app/features/presentation/views/widgets/news_list_view_builder.dart';
 
 class CategoryView extends StatelessWidget{
   final String category;

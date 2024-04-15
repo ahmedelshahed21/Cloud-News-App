@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/components/categories_listview.dart';
-import 'package:news_app/components/news_list_view_builder.dart';
+import 'package:news_app/features/presentation/views/widgets/categories_listview.dart';
+import 'package:news_app/features/presentation/views/widgets/news_list_view_builder.dart';
 class HomeView extends StatelessWidget{
    const HomeView({super.key});
   @override
@@ -12,11 +12,13 @@ class HomeView extends StatelessWidget{
           children: [
             Text("News",
               style: TextStyle(
+                fontWeight: FontWeight.bold,
                 color: Colors.black
               ),
             ),
             Text("Cloud",
               style: TextStyle(
+                  fontWeight: FontWeight.bold,
                   color: Colors.orange
               ),
             ),
