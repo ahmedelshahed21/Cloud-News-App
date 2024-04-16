@@ -1,9 +1,10 @@
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:news_app/features/presentation/views/widgets/news_listview.dart';
-import 'package:news_app/features/data/models/article_model.dart';
-import 'package:news_app/core/utils/services/news_service.dart';
-import 'package:news_app/features/presentation/views/widgets/shimmer_loading.dart';
+import 'package:news_cloud/core/utils/services/news_service.dart';
+import 'package:news_cloud/features/home/data/models/article_model.dart';
+import 'package:news_cloud/features/home/presentation/views/widgets/loading_effect.dart';
+import 'package:news_cloud/features/home/presentation/views/widgets/news_listview.dart';
+
 
 class NewsListViewBuilder extends StatefulWidget{
   final String category;
@@ -40,7 +41,14 @@ class _NewsListViewBuilderState extends State<NewsListViewBuilder> {
           else
            {
            return const SliverToBoxAdapter(
-                child: ShimmerLoading()
+                child: Column(
+                  children: [
+                    LoadingEffect(),
+                    LoadingEffect(),
+                    LoadingEffect(),
+                    LoadingEffect(),
+                  ],
+                )
               );
          }
       }

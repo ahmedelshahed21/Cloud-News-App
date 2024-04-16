@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:news_app/features/data/models/article_model.dart';
+import 'package:news_cloud/features/home/data/models/article_model.dart';
 class NewsService {
 
   final Dio _dio;
@@ -11,7 +11,7 @@ class NewsService {
     try{
       final response = await _dio.get('${_baseUrl}top-headlines?apiKey=$_apiKey&country=us&category=$category');
       Map<String,dynamic> jsonData=response.data;
-      List<dynamic> articles = jsonData['articles'] ;
+      //List<dynamic> articles = jsonData['articles'] ;
       List<ArticleModel> articlesList=[];
 
       for (var article in jsonData['articles']){

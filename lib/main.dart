@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/features/presentation/views/home_view.dart';
-
+import 'package:news_cloud/features/splash/presentation/views/splash_view.dart';
 
 void main() {
   runApp(
-    const MaterialApp (
+    MaterialApp (
+      theme: ThemeData.dark(),
       debugShowCheckedModeBanner: false,
-      home: HomeView(),
+      home: const SplashView(),
     )
   );
 }

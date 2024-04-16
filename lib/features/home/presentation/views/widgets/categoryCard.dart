@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/features/data/models/category_model.dart';
-import 'package:news_app/features/presentation/views/category_view.dart';
+import 'package:news_cloud/features/home/data/models/category_model.dart';
+import 'package:news_cloud/features/home/presentation/views/category_view.dart';
 
 class CategoryCard extends StatelessWidget{
   const CategoryCard({super.key,required this.category});
@@ -13,7 +13,7 @@ class CategoryCard extends StatelessWidget{
         Navigator.of(context).push(
           MaterialPageRoute(
               builder: (context) {
-                return CategoryView(category: category.categoryName);
+                return CategoryView(category: category.categoryName??'');
               }));
         },
       child: Padding(
@@ -29,7 +29,7 @@ class CategoryCard extends StatelessWidget{
               borderRadius: BorderRadius.circular(12),
             ),
             child: Center(
-                child: Text(category.categoryName,
+                child: Text(category.categoryName??'',
               style: const TextStyle(
                   color: Colors.white,
                   fontSize: 20,

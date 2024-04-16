@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/features/presentation/views/widgets/categories_listview.dart';
-import 'package:news_app/features/presentation/views/widgets/news_list_view_builder.dart';
+import 'package:news_cloud/features/home/presentation/views/widgets/categories_listview.dart';
+import 'package:news_cloud/features/home/presentation/views/widgets/news_list_view_builder.dart';
+
 class HomeView extends StatelessWidget{
    const HomeView({super.key});
+   static String id='HomeView';
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -13,7 +15,7 @@ class HomeView extends StatelessWidget{
             Text("News",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                color: Colors.black
+                // color: Colors.black
               ),
             ),
             Text("Cloud",
@@ -28,7 +30,7 @@ class HomeView extends StatelessWidget{
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body:   const Padding(
+      body:const Padding(
         padding: EdgeInsets.symmetric(horizontal: 8.0,vertical: 8.0),
         child: CustomScrollView(
           physics: BouncingScrollPhysics(),

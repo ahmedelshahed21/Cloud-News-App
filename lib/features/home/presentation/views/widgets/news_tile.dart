@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:news_app/core/utils/assets_app.dart';
-import 'package:news_app/core/utils/functions/launch_url.dart';
-import 'package:news_app/features/data/models/article_model.dart';
+import 'package:news_cloud/core/utils/assets_app.dart';
+import 'package:news_cloud/core/utils/functions/launch_url.dart';
+import 'package:news_cloud/features/home/data/models/article_model.dart';
 
 
 class NewsTile extends StatelessWidget {
@@ -24,7 +24,7 @@ class NewsTile extends StatelessWidget {
               height: 200,
               width: double.infinity,
                 fit: BoxFit.fill,
-              ) : Image.asset(AssetsAPP.failure,
+              ) : Image.asset(ImagesAPP.failure,
                 height: 200,
                 width: double.infinity,
                 fit: BoxFit.fill,
@@ -36,7 +36,7 @@ class NewsTile extends StatelessWidget {
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               style: const TextStyle(
-                color: Colors.black,
+                // color: Colors.black,
                 fontSize: 16,
                 fontWeight: FontWeight.w500
               ),
