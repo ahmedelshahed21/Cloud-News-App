@@ -1,4 +1,4 @@
-abstract class ImagesAPP {
+abstract class AppImages {
   static const technology='assets/images/technology.jpeg';
   static const science='assets/images/science.avif';
   static const health='assets/images/health.avif';
@@ -9,6 +9,6 @@ abstract class ImagesAPP {
   static const failure='assets/images/failure.gif';
 }
 
-abstract class AnimationApp {
-  static const animation='assets/animation/news_animation.json';
+abstract class AppAnimation {
+  static const splashAnimation='assets/animation/news_animation.json';
 }

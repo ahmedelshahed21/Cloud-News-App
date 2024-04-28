@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:news_cloud/core/utils/assets_app.dart';
+import 'package:news_cloud/core/utils/app_assets/app_assets.dart';
 import 'package:news_cloud/core/utils/functions/launch_url.dart';
 import 'package:news_cloud/features/home/data/models/article_model.dart';
 
@@ -19,12 +19,12 @@ class NewsTile extends StatelessWidget {
           children: [
             ClipRRect(
               borderRadius: BorderRadius.circular(8),
-              child:article.image!= null ?
+              child:article.image != null ?
               Image.network(article.image!,
               height: 200,
               width: double.infinity,
                 fit: BoxFit.fill,
-              ) : Image.asset(ImagesAPP.failure,
+              ) : Image.asset(AppImages.failure,
                 height: 200,
                 width: double.infinity,
                 fit: BoxFit.fill,

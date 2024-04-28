@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:lottie/lottie.dart';
-import 'package:news_cloud/core/utils/assets_app.dart';
+import 'package:news_cloud/core/utils/app_assets/app_assets.dart';
 import 'package:news_cloud/features/home/presentation/views/home_view.dart';
 
 
@@ -18,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: AnimatedSplashScreen(
-        splash: Lottie.asset(AnimationApp.animation),
+        splash: Lottie.asset(AppAnimation.splashAnimation),
         backgroundColor: Colors.black,
         nextScreen: const HomeView(),
         splashTransition: SplashTransition.scaleTransition,
